@@ -29,7 +29,7 @@ func cacheKey(prefix string, keys ...string) string {
 
 // slugify make slug-format-text from strings.
 func slugify(keys ...string) string {
-	rxChars := regexp.MustCompile("[^a-zA-Z0-9\\-]")
+	rxChars := regexp.MustCompile(`[^a-zA-Z0-9-]`)
 	rxSpaces := regexp.MustCompile(`\s+`)
 	rxDashes := regexp.MustCompile(`\-+`)
 	content := strings.Join(keys, "-")
