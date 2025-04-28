@@ -33,9 +33,9 @@ func slugify(keys ...string) string {
 	rxSpaces := regexp.MustCompile(`\s+`)
 	rxDashes := regexp.MustCompile(`\-+`)
 	content := strings.Join(keys, "-")
-	content = rxChars.ReplaceAllString(content, "")
 	content = rxSpaces.ReplaceAllString(content, "-")
 	content = rxDashes.ReplaceAllString(content, "-")
+	content = rxChars.ReplaceAllString(content, "")
 	return content
 }
 
