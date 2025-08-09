@@ -17,7 +17,7 @@ func TestVerificationCode(t *testing.T) {
 	codeKey := "test"
 	codeValue := "123456"
 	ttl := 10 * time.Minute
-	verificationCode := cache.NewVerification(codeKey, 10, ttl, redisCache)
+	verificationCode := cache.NewVerification(codeKey, ttl, redisCache)
 
 	// Test Generate method
 	_, err := verificationCode.Generate(6)

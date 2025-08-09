@@ -34,7 +34,7 @@ type verification struct {
 }
 
 // NewVerification creates a new instance of the verification code.
-func NewVerification(name string, maxAttempts uint32, ttl time.Duration, cache Cache) VerificationCode {
+func NewVerification(name string, ttl time.Duration, cache Cache) VerificationCode {
 	return &verification{
 		name:  "verify " + name,
 		ttl:   ttl,
